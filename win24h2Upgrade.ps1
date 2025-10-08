@@ -28,7 +28,7 @@ function Start-Windows11Upgrade {
 
     $setupPath = "$isoDrive`:\setup.exe"
     Write-Host "Starting the Windows 24H2 upgrade"
-    Start-Process -FilePath $setupPath -ArgumentList "/auto upgrade /quiet" -Wait
+    Start-Process -FilePath $setupPath -ArgumentList "/auto upgrade /eula accept" -Wait
     Write-Host "Upgrade Installation Is In Place. You will need to manually reboot when done"
 }
 Start-Windows11Upgrade
