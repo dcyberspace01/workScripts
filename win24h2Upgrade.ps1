@@ -11,7 +11,7 @@ function Start-Windows11Upgrade {
         Write-Error "ISO volume not found. Performing ISO Download Now..."
         Write-Host "Downloading Windows 11 ISO..."
         New-Item -Path "C:\Temp" -ItemType Directory | Out-Null
-        Start-BitsTransfer -Source $IsoUrl -Destination $IsoPath
+        Start-BitsTransfer -Source $IsoUrl -Destination "C:\Temp"
     } else {
         Write-Host "ISO is already downloaded..."
     }
